@@ -54,17 +54,7 @@ public class RUDantrean extends HttpServlet {
             Integer id = Integer.parseInt(id_antrean);
             Antrean p = af.find(id);
             request.setAttribute("p", p);
-        } else if (request.getParameterMap().containsKey("d")) {
-
-            response.setContentType("text/html;charset=UTF-8");
-            try (PrintWriter out = response.getWriter()) {
-                String id_antrean = request.getParameter("d");
-                Integer id = Integer.parseInt(id_antrean);
-                Antrean a = af.find(id);
-                af.remove(a);
-            }
-            String url = request.getContextPath() + "/listAntrean.jsp";
-//      response.sendRedirect(url);
+        
         } else {
             List<Antrean> la = af.findAll();
             request.setAttribute("ole", la);

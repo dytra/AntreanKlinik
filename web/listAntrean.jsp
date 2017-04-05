@@ -37,7 +37,7 @@
           <td>${u.getStatus()}</td>
           <td>${u.getKeluhan()}</td>
           <td><a href="/AntreanKlinik/edit_antrean.jsp?e=${u.getIdAntrean()}">Edit</td>
-          <td><a href="/AntreanKlinik/RUDantrean?d=${u.getIdAntrean()}">Hapus</td>
+          
         </tr>
 
       </c:forEach>
